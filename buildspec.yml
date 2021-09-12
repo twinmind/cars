@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - dotnet publish -c Release
+artifacts:
+  files:
+    - '**/*'
+  base-directory: Cars/bin/Release/netcoreapp3.1/publish
