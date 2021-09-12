@@ -95,6 +95,7 @@ namespace Cars.Services
                 }
                 brandEntity.Models = (await models.ToListAsync()).OrderBy(m => m.Id).ToList();
                 var brandDto = _mapper.Map<BrandDto>(brandEntity);
+                brandDto.Models.ForEach(m => m.BrandId = null);
                 return brandDto;
             }
             return null;

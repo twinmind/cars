@@ -63,7 +63,10 @@ namespace Cars.Controllers
         /// Get brand
         /// </summary>
         /// <remarks>Retrieves the details of an existing car brand. You need only supply the unique brand identifier that was returned upon brand creation.</remarks>
-        /// <param name="Id">brand identifier</param>
+        /// <param name="Id">brand identifier.</param>
+        /// <param name="limit">A limit on the number of models to be returned. By default all models are returned.</param>
+        /// <param name="modelAfter">A cursor to use in pagination. It is an model ID that defines your place in the list to fetch the next page.</param>
+        /// <param name="modelBefore">A cursor to use in pagination. It is an model ID that defines your place in the list to fetch the previous page.</param>
         /// <returns>Returns a brand object if a valid identifier was provided.</returns>
         [HttpGet("brands/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
