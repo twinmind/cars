@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cars</name>
+    </assembly>
+    <members>
+        <member name="T:Cars.Controllers.CatalogController">
+            <summary>
+            Car catalog API
+            </summary>
+        </member>
+        <member name="M:Cars.Controllers.CatalogController.#ctor(Cars.Services.ICatalogService)">
+            <summary>
+            Car catalog API
+            </summary>
+        </member>
+        <member name="M:Cars.Controllers.CatalogController.GetModel(System.Int32)">
+            <summary>
+            Get model
+            </summary>
+            <remarks>Retrieves the details of an existing car model. You need only supply the unique model identifier that was returned upon model creation.</remarks>
+            <param name="Id">model identifier</param>
+            <returns>Returns a model object if a valid identifier was provided.</returns>
+        </member>
+        <member name="M:Cars.Controllers.CatalogController.SaveModel(Cars.ModelDto)">
+            <summary>
+            Create or update model
+            </summary>
+            <param name="modelDto">Model object</param>
+            <returns>Returns model object if saving succeeded.</returns>
+        </member>
+        <member name="M:Cars.Controllers.CatalogController.GetBrand(System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Get brand
+            </summary>
+            <remarks>Retrieves the details of an existing car brand. You need only supply the unique brand identifier that was returned upon brand creation.</remarks>
+            <param name="Id">brand identifier</param>
+            <returns>Returns a brand object if a valid identifier was provided.</returns>
+        </member>
+        <member name="M:Cars.Controllers.CatalogController.SaveBrand(Cars.BrandDto)">
+            <summary>
+            Create or update brand
+            </summary>
+            <param name="brandDto">Brand object</param>
+            <returns>Returns brand object if saving succeeded.</returns>
+        </member>
+    </members>
+</doc>
