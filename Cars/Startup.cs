@@ -33,9 +33,6 @@ namespace Cars
                 options.UseNpgsql(Configuration.GetConnectionString("DataContext")));
 
             services.AddControllers()
-                //.AddJsonOptions(options =>
-                //    options.JsonSerializerOptions.PropertyNamingPolicy
-                //     = JsonNamingPolicy.CamelCase)
                 .AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
