@@ -28,7 +28,7 @@ namespace Cars.Services
         {
             if (!modelRequest.BrandId.HasValue || modelRequest.BrandId <= 0) 
             {
-                throw new ArgumentException("BrandId should be a positive number.");
+                throw new AppException("BrandId should be a positive number.");
             }
             var modelEntity = _mapper.Map<Model>(modelRequest);
 

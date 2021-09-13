@@ -67,6 +67,9 @@ namespace Cars
 
             app.UseRouting();
 
+            // global error handler
+            app.UseMiddleware<ErrorHandlerMiddleware>();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
